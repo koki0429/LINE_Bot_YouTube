@@ -23,9 +23,8 @@ class SearchYoutubeVideo
 
         // ビデオリストを取得
         $result = $manager->search->listSearch('id', [
-            'q' => $channel_name,
-            'maxResults' => 1,
-            'order' => 'viewCount',
+            'q' => $channel_name, // 検索文字を指定
+            'maxResults' => 1, // 取得件数を指定
         ]);
 
         return $result->items;
